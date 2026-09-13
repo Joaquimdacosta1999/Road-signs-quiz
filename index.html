@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SA Code B Learner's Test — Road Signs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <div>
+          <span class="eyebrow">SOUTH AFRICA • CODE B</span>
+          <h1>Road Signs Quiz</h1>
+          <p>One sign at a time — identify the sign from the official chart.</p>
+        </div>
+        <div class="stats">
+          <span id="score">0 / 0</span><small>score</small>
+        </div>
+      </header>
+
+      <section class="toolbar">
+        <label
+          >Category
+          <select id="category">
+            <option value="all">All road signs</option>
+            <option>Regulatory</option>
+            <option>Warning</option>
+            <option>Information</option>
+          </select></label
+        >
+        <label
+          >Mode
+          <select id="mode">
+            <option value="meaning">What does it mean?</option>
+            <option value="code">Identify the code</option>
+          </select></label
+        >
+        <button id="restart" class="secondary">Restart</button>
+      </section>
+
+      <section class="progress"><div id="progressBar"></div></section>
+
+      <section class="card">
+        <div class="meta">
+          <span id="qNumber">Question 1</span
+          ><span id="categoryLabel">Regulatory</span>
+        </div>
+        <div class="sign-frame">
+          <img id="signImage" alt="South African road sign" />
+        </div>
+        <h2 id="question">What does this road sign mean?</h2>
+        <div id="answers" class="answers"></div>
+        <div id="feedback" class="feedback" hidden></div>
+        <button id="next" class="next" disabled>Next question →</button>
+      </section>
+
+      <section class="tip">
+        <strong>Study tip:</strong> answer before looking at the code. The app
+        records your score in this session and lets you switch between meaning
+        and code-identification practice.
+      </section>
+
+      <footer>
+        Source basis: your supplied <em>RTSigns_charts.pdf</em>. Meanings use
+        the terminology printed on sheet 5; sign artwork is cropped from sheets
+        1–2. This is a study tool, not an official test.
+      </footer>
+    </main>
+    <script src="data/road-signs.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
